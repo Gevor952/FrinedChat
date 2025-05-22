@@ -1,0 +1,25 @@
+
+<div class="container">
+  <div class="login">
+    <h1>Login Form</h1>
+
+    <form (ngSubmit)="login()">
+      <div class="input-box">
+        <input [(ngModel)]="user.email" name="email" type="email" placeholder="Email">
+        <i class="fa fa-envelope"></i>
+      </div>
+
+      <div class="input-box">
+        <input [(ngModel)]="user.password" name="password" type="password" placeholder="Password">
+        <i class="fa fa-lock"></i>
+      </div>
+
+      <button type="submit">LOGIN</button>
+
+      <div class="links">
+        <a routerLink="/auth/register">You don't have an account</a>
+      </div>
+    </form>
+
+  </div><!-- End Login -->
+</div>

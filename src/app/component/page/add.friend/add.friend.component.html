@@ -1,0 +1,33 @@
+
+<app-navigation></app-navigation>
+<h2>User List</h2>
+
+<form style="margin: 0 0 20px 40%" (ngSubmit)="getByKeyword()">
+  <input type="text" [(ngModel)]="keyword" name="keyword" placeholder="Search by name or email..." required>
+  <button type="submit">Search</button>
+</form>
+
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th></th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let u of users">
+    <td>{{u.id}}</td>
+    <td>
+      <img [src]="'http://localhost:8080/getImage/' + u.img" alt="Product Image" width="100" height="100"/></td>
+    <td>{{u.name}}</td>
+    <td>{{u.email}}</td>
+    <td>  <button (click)="sendFriendRequest(u.id) " type="submit">Send</button>
+    </td>
+  </tr>
+
+  </tbody>
+</table>
+

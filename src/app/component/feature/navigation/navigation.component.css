@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e0e0e0;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #222;
+  padding: 5px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 30px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  position: relative;
+  padding: 12px 0;
+  text-transform: uppercase;
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: transform 0.4s ease, opacity 0.4s ease, color 0.4s ease;
+}
+
+/* Navbar link hover effect */
+.navbar a:hover {
+  color: #493941;
+  transform: translateY(-5px);
+}
+
+/* Animation: sliding in from the sides */
+.navbar a:nth-child(odd) {
+  animation: slideInLeft 0.5s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.navbar a:nth-child(even) {
+  animation: slideInRight 0.5s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+/* Sliding animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating effect for navbar links */
+.navbar a {
+  animation: floatUp 2s infinite alternate;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}

@@ -1,0 +1,24 @@
+<div class="login-box">
+  <h2>Register</h2>
+  <form>
+    <div class="user-box">
+      <input type="text" name="name" #name="ngModel" required minlength="4" [(ngModel)]="user.name" >
+      <div class="text-danger">
+        <span *ngIf="name.errors?.['required'] && name.dirty">This is Required</span>
+        <span *ngIf="name.errors?.['minlength']">Min Char 4 Required</span>
+
+      </div>
+      <label>Name</label>
+    </div>
+    <div class="user-box">
+      <input type="text" name="email" required [(ngModel)]="user.email" >
+      <label>Email</label>
+    </div>
+    <div class="user-box">
+      <input type="password" name="password" required [(ngModel)]="user.password">
+      <label>Password</label>
+    </div>
+
+    <button  class="submit-btn" (click)="onSave()" >Register</button>
+  </form>
+</div>

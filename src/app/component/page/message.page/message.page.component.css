@@ -1,0 +1,129 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  height: 100vh;
+  background-color: #e5f3e8;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  background-color: #ffffff;
+  border-right: 1px solid #dcdcdc;
+  display: flex;
+  flex-direction: column;
+}
+
+.search {
+  padding: 10px;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.search input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.chat-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.chat-item {
+  padding: 12px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+.chat-item:hover {
+  background-color: #f3f3f3;
+}
+
+.chat-item.active {
+  background-color: #d8f3dc;
+}
+
+/* Chat area */
+.chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-image: url('https://telegram.org/img/bg_tile.png');
+  background-repeat: repeat;
+}
+
+.chat-header {
+  background-color: #fdfdfd;
+  padding: 12px 16px;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  background-color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  max-width: 65%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.message.sent {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+}
+
+.message img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.chat-input {
+  padding: 10px;
+  background-color: #ffffff;
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.chat-input button {
+  margin-left: 10px;
+  padding: 10px 16px;
+  background-color: #128c7e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: #075e54;
+}

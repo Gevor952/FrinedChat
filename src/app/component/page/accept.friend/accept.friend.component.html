@@ -1,0 +1,24 @@
+
+<app-navigation></app-navigation>
+<h2>User List</h2>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let f of friendRequestIs">
+    <td>{{f.user.id}}</td>
+    <td>{{f.user.name}}</td>
+    <td>{{f.user.name}}</td>
+    <td>  <button type="submit" (click)="accept(f.id)">accept</button>
+    </td>
+  </tr>
+
+  </tbody>
+</table>
+
